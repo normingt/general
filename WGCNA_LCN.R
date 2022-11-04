@@ -57,7 +57,7 @@ Treecounts <- hclust(dist(counts_0), method="average")
 datTraits <- read.csv("sample_trait_data.csv", header=TRUE, row.names=1)
 traitColors <- numbers2colors(datTraits, signed = FALSE);
 
-png(filename = "metabolites other sample tree.png", res=1200, width=6.5, height=4, units="in")
+png(filename = "sample tree.png", res=1200, width=6.5, height=4, units="in")
 par(cex=0.6)
 par(mar=c(0,5,2,0))
 plotDendroAndColors(Treecounts, traitColors,groupLabels = names(datTraits),main = "Sample dendrogram and trait heatmap")
